@@ -1,18 +1,17 @@
 # red.yellow.blue
 
-Red.Yellow.Blue is a delightfully simple Web Design / Development tool as well as a customizeable Content Management System. It was built with simplicity in mind. The goal is to create a more joyous experience for everyone who is publishing on the web. 
+Red.Yellow.Blue is a delightfully simple  Web Design / Development tool as well as a customizeable Content Management System. It was built with simplicity in mind. The goal is to create a more joyous experience for everyone who is publishing on the web. 
 
 Built using PHP, MySQL, and JQuery
 
-
-                Features include:
-                "Pop-Out" CMS control panel
-                Drag and Drop Layout 
-                Minimalist Setup - Start with a blank canvas
-                Flexible options open for Developers to use custom add-ons
-                No Coding necessary for a Basic Users
-                Responsive to mobile screens
-                "Box Types": add-ons for custom CMS inputs 
+      Features include:
+      "Pop-Out" CMS control panel
+      Drag and Drop Layout 
+      Minimalist Setup - Start with a blank canvas
+      Flexible options open for Developers to use custom add-ons
+      No Coding necessary for a Basic Users
+      Responsive to mobile screens
+      "Box Types": add-ons for custom CMS inputs 
 
 
 
@@ -62,7 +61,7 @@ Step 5: You can now begin to use Red.Yellow.Blue to design and manage your websi
 
 HOW IT WORKS:
 
-* Pop-Up Content Management System: The "Back End" controls are built right into the "Front End" of your site. One could say: the design of the front end is applied to the Back End, or vice versa. It's the same thing. It might as well be invisible.  As the editor of your site, you don't have to go back and forth between a dashboard and the live website to see your changes. Instead, you edit your content in the Pop-Up Helper Window, and see the results right away. The 3-Color menu icon that appears in the top left hand corner of the screen is the only minimalistic indication that you are logged in. You are able to edit everything in it's place, right where you see it. 
+* Pop-Up Content Management System: The backend controls are built right into the frontend of the website. You could also say: The design of the frontend is applied to the backend, or vice versa. It's the same thing.  As the editor of your page, you don't have to go back and forth between a dashboard and the live website to see your changes. Instead, you edit your content in the Pop-Up Helper Window, and see the results right away. A 3-Color menu icon appears in the top left hand corner of the screen. That is the only minimalistic indication that you are logged in. You are able to edit everything right in it's place, right where you see it. 
 
 
 * Adding Elements : You start with a blank page, and add elements to it.  Elements can be a Photo, some Text, or a Box for content.  There are different kinds of Boxes -  Blog, Gallery, Video or Shop. The format of existing Boxes is easy for developers to copy, so you can build add-ons and make your own specific content management system as needed in any given situation. 
