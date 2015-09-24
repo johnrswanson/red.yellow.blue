@@ -3,8 +3,9 @@
 Red.Yellow.Blue is a delightfully simple Web Design / Development tool as well as a customizeable Content Management System. It was built with simplicity in mind. The goal is to create a more joyous experience for everyone who is publishing on the web. 
 
 Built using PHP, MySQL, and JQuery
-Features include:
-                
+
+
+                Features include:
                 "Pop-Out" CMS control panel
                 Drag and Drop Layout 
                 Minimalist Setup - Start with a blank canvas
@@ -27,7 +28,7 @@ Requirements:  You must have a Host Server and a Domain Name to use this softwar
 
 Installation Instructions:
 
-Step 1: Download the red.yellow.blue software
+Step 1: Download the Red.Yellow.Blue software
 
         See the folder contents :
         public_html
@@ -69,6 +70,6 @@ HOW IT WORKS:
 
 * When you put an element on your page, Info about the element is stored as a record in the database. The css rules that apply to each thing on the page (for example: color, font, size, position, etc...) are all stored in the database as well. To change something on your page, you simply click on the thing you want to edit, and an EDIT button will appear over the element. Click on the EDIT button to launch the Pop-Out Helper Window for that specific element. Click Save, and the attributes of that element are then modified in the database. As you continue to add more content and move things around on your page the database is updated in real time! 
 
-* I will add more info here soon about the rest of the features. For now, this is a pretty good summary of what I'm working on releasing. I am planning to be ready for release of the sourse code on October 1 2015
+* I will add more info here soon about the rest of the features. For now, this is a pretty good summary of what I'm working on releasing. I am planning to release the source code on October 1 2015
 
 
