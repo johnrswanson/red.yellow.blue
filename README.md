@@ -30,11 +30,11 @@ Requirements:  You must have a Host server and a Domain name to use this softwar
 
 Installation Instructions:
 
-Step 1: Download the Red.Yellow.Blue software
+Step 1: Download the Red.Yellow.Blue Install ZIP file
 
         See the folder contents :
-            public_html
-            MYSQLDB.sql
+            A Folder called "Copy These to public_html" 
+            Database Install.sql
             connect.php
         
 Step 2: Create an empty MYSQL database: 
