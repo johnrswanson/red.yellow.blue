@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'gothic';
+    src: url(../fonts/LetterGothic.ttf);
+}
+*{
+	font-family: 'gothic';
+	font-style: italic;
+	text-transform: uppercase;
+}
+body{
+	max-width: 1680px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+}
+button.close span{
+	font-style: normal;
+	color: white;
+}
+.modal-header{
+	border: none;
+}
+.navbar-default{
+	background: none;
+	/*box-shadow: 0px 80px 80px white;*/
+	overflow: hidden;
+	height: 150px;
+	z-index: 100;
+	border: none;
+}
+.kip{
+	max-height: 150px;
+	z-index: 1000;
+	position: relative;
+	float: left;
+	top: 0;
+	width: auto;
+	height: 150px;
+	display: block;
+	border-right: 1000px solid white;
+}
+@media screen and (min-width:640px){
+	.kip{
+		width: 1600px;
+	}
+}
+@media screen and (min-width:768px){
+	.kip{
+		width: 1600px;
+	}
+}
+@media screen and (min-width:992px){
+	.kip{
+		width: 1700px;
+	}
+}
+@media screen and (min-width:1200px){
+	.kip{
+		width: 1761px;
+	}
+}
+
+.heroVid{
+	z-index: 3;
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	max-width: 2000px;
+	height: 150px;
+	overflow: hidden;
+}
+.post{
+	z-index: 99;
+	position: relative;
+}
+.postContainer{
+	position: relative;
+	top: 240px;
+	max-width: 1440px;
+}
+.divide{
+	width: 100%;
+	height: 60px;
+}
+.title{
+	font-size: 30px;
+}
+.content:hover{
+	cursor: pointer;
+}
+.content{
+	height: auto;
+	width: auto;
+	/*overflow: hidden;*/
+}
+.modal-body img{
+	display: block;
+	margin: auto;
+	max-width: 500px;
+	height: auto;
+}
+.modal-backdrop.in{
+	opacity: .8;
+}
+.gallery img, .gallery video{
+	display: inline-block;
+	float: left;
+	margin: 0;
+	position: relative;
+	padding: 0;
+	opacity: .5;
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	-webkit-transition: opacity .1s;
+	-webkit-transition-timing-function: ease-in; /* Safari and Chrome */
+	transition-timing: opacity .1s;
+    transition-timing-function: ease-in;
+    /*background-image: url("../tv.jpg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.gallery:hover{
+	opacity: 1;
+}

@@ -1,0 +1,5 @@
+[21-Sep-2015 15:06:53 UTC] PHP Notice:  Undefined variable: oldphoto in /home/johnrswanson/public_html/bushwicknetwork.com/admin/form/form_simplebg.php on line 60
+[21-Sep-2015 15:06:53 UTC] PHP Notice:  Undefined variable: background in /home/johnrswanson/public_html/bushwicknetwork.com/admin/form/form_simplebg.php on line 91
+[21-Sep-2015 15:06:53 UTC] PHP Notice:  Undefined variable: oldphoto in /home/johnrswanson/public_html/bushwicknetwork.com/admin/form/form_simplebg.php on line 99
+[21-Sep-2015 15:06:53 UTC] PHP Notice:  Undefined variable: oldphoto in /home/johnrswanson/public_html/bushwicknetwork.com/admin/form/form_simplebg.php on line 101
+[21-Sep-2015 15:06:53 UTC] PHP Notice:  Undefined variable: oldphoto in /home/johnrswanson/public_html/bushwicknetwork.com/admin/form/form_simplebg.php on line 105

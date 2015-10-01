@@ -1,0 +1,21 @@
+<style>
+
+
+td{}
+li{list-style:none;}
+ul #contentLeft{position:absolute; top:0px; background:#000; }
+img { border-style: none; }
+a img {  border: 0 none; }
+.alert{background:#ffcccc; padding:40px; margin:5px;}
+
+
+input{ border-radius:5px; padding:5px;}
+
+
+
+.confirm{position:fixed; top:0px; right:0px; text-align:right; width:100%;   font-size:14px; text-align:right;}
+
+.redalert{position:fixed; top:200px; right:40%; text-align:right; width:500px; font-size:30px;  color:#f00;}
+
+</style>
+

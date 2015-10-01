@@ -1,0 +1,49 @@
+.ui-state-highlight {background:red; height: 1.5em; line-height: 1.2em; }
+
+
+#photocontentLeft {}
+#photocontentLeft li { }
+#photocontentRight {}
+
+#blogcontentLeft {width: 500px;}
+	#blogcontentLeft li {float:left; color:#000; width:500px; height:33px; }
+#blogcontentRight {float:left;width:490px;  font-size:10px; margin-top:0px; padding:10px; background-color:none;color:#000;}
+
+#blogphotocontentLeft {width: 500px;}
+#blogphotocontentLeft li {float:left;background-color:#eeeeee; color:#000; border: #CCCCCC solid 1px;color:#fff; width:120px; height:130px;}
+#blogphotocontentRight {float:left;width:500px;  font-size:10px; margin-top:padding:10px; background-color:none;color:#000;}
+
+
+#videocontentLeft {width: 400px;}
+#videocontentLeft li {float:left; color:#000; width:400px; height:33px;}
+#videocontentRight {float:left;width: 500px; margin-top:padding:10px; font-size:10px; background-color:#fff;color:#000;}
+
+ #storecontentLeft {width: 370px;}
+#storecontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px;height:100px;}
+#storecontentRight {float:left; width: 370px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+ #storecategorycontentLeft {width: 370px;}
+#storecategorycontentLeft li {float:left;background-color:#fff;border: #CCCCCC solid 1px;color:#000;width:340px;height:100px;}
+#storecategorycontentRight {float:right; width: 370px;margin-top:padding:10px;background-color:#fff;color:#000;}
+
+#staffcontentLeft {width: 370px;}
+#staffcontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px;height:100px;}
+#staffcontentRight {float:lwft;width: 370px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+#classcontentLeft {width: 370px;}
+#classcontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px;height:100px;}
+#classcontentRight {float:right;width: 370px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+
+#albumcontentLeft {width: 370px;}
+#albumcontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px;height:100px;}
+#albumcontentRight {float:right;width: 100px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+
+#songcontentLeft {width: 370px;}#songcontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px; height:100px;}
+#songcontentRight {float:right;width: 200px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+#magazinecontentLeft {width: 370px;}#magazinecontentLeft li {float:left;background-color:#eeeeee;border: #CCCCCC solid 1px;color:#fff;width:340px; height:100px;}
+#magazinecontentRight {float:right;width: 200px;margin-top:padding:10px;background-color:#eeeeee;color:#FFFFFF;}
+
+header{padding: 0px;}
