@@ -78,7 +78,8 @@ border-radius:'.$info2['radius'].';';
 
 
 $file=stripslashes($info2['file']);
-if($file==''){echo'overflow-y:auto;';}
+//Enable Overflow within Divs
+//if($file==''){echo'overflow-y:auto;';}
 echo'
 }
 

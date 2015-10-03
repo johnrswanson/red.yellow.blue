@@ -77,6 +77,16 @@ font-family:'.$linkfontfamily.';
 	font-family:'.$linkfontfamily.';
 	}
 	
+		#linksbar_simple a{ 
+color:'.$linkcolor.';
+
+	}
+	
+	#linksbar_simple a:hover{
+	color:'.$hovercolor.';
+	
+	}
+	
 	
 	';
 	

@@ -25,7 +25,8 @@ echo'</script>';
 	echo'<p><div class="alert" ><b></b>';
 
 if($thistype=='1'){echo'Your Navigation Links will be in this Box.'; }
-	echo'<input type="text" name="title" value="" placeholder="Enter a Box Title">';
+	else{echo'<input type="text" name="title" value="" placeholder="Enter a Box Title">';}
+	
 	echo'<input type="hidden" name="pageID" value="'.$thispage.'">';
 	echo'<input type="hidden" name="type" value="'.$thistype.'">';
 echo'</div></P>';
