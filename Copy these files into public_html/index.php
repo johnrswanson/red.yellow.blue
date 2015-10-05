@@ -119,6 +119,7 @@ $data3=mysql_query("select * from pages where ID='$thispageID' limit 1");
 while($info3=mysql_fetch_array($data3))
 	{	$here=$info3['ID'];
 	$pic=$info3['photo'];
+	$safepic = str_replace( ' ', '+', $pic ); 
 	$background=$info3['background'];
 		$safebg=str_replace("#", "", $background);
 			}
@@ -168,7 +169,7 @@ echo' <div class="menuc">
 
 
 echo' <div class="menuc">
-<a class="secretlink lightbox_trigger small" href="/admin/admin_duplicate_page.php?dupeID='.$here.'&bg='.$safebg.'&pic='.$pic.'">
+<a class="secretlink lightbox_trigger small" href="/admin/admin_duplicate_page.php?dupeID='.$here.'&bg='.$safebg.'&pic='.$safepic.'">
 <img src="/img/icons/copypage.png" width="27px">
 <br> Copy Page</a></div>';
 

@@ -14,6 +14,7 @@ $dupeID=$_GET['dupeID'];
 $bg=$_GET['bg'];
 $bg='#'.$bg;
 $pic=$_GET['pic'];
+$safepic = str_replace( '+', ' ', $pic ); 
 $funtitle=$_GET['t'];
 if($funtitle==''){$funtitle='This Page';}
 	echo'<form method="POST" action="/admin/confirm.php">';
@@ -24,7 +25,7 @@ if($funtitle==''){$funtitle='This Page';}
 echo'<br><input style="float:right;" type="submit" name="duper" value="Create Page" >';
 
 
-	echo'<input type="hidden" name="photo" value="'.$pic.'" >';
+	echo'<input type="hidden" name="photo" value="'.$safepic.'" >';
 	echo'<input type="hidden" name="background" value="'.$bg.'">';
 	echo'<input type="hidden" name="dupeID" value="'.$dupeID.'" >';
 	
