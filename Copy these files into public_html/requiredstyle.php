@@ -91,6 +91,22 @@ color:'.$linkcolor.';
 	';
 	
 	
+	echo'.sublinksbar{ min-width: 300px;  width: 20%;  height: 0px; text-align: center;  position: fixed;  background:'.$headercolor.';  padding: 0px; margin: 0px; top: auto; margin-top: -1px;  }
+	
+	
+	#linksbar_simple .sublinksbar {position: relative; clear:both; height: 0px; text-align; left; width: 100%;  }
+	
+	#linksbar_simple ul li .sublinksbar a {display:block; }
+	
+	#linksbar ul li .sublinksbar a
+	{display:none; position: relative; margin: auto; width: 300px;  right:0px; z-index: 100000; border-bottom: solid 1px; #333; background:'. $headercolor.' ; height: '.$fontsize.'; padding-top: 5px; padding-bottom: 5px; clear:both; width: 100%;   }';
+	
+	
+	echo'#linksbar_simple ul li .sublinksbar a
+	{display:none; position: relative; top:  z-index: 100000; 	 }';
+
+	
+	
 	
 	echo $user_css;
 	

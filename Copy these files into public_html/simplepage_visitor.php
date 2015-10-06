@@ -1,4 +1,6 @@
-<?
+<style>
+	li { list-style:none;    }
+	</style><?
 //THIS IS  THE ORIGINAL SIMPLE PAGE WITH ONE PHOTO AND ONE TEXT BLOCK! NEVER FORGET!!
 				//echo'<div class="pagetitle">'.$title.'</div>';
 				//echo'<div class="pagetext">'.$text.'</div>';

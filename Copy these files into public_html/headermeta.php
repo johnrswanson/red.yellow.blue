@@ -5,7 +5,7 @@
 
 if($showpage=='')
 	{
-		$data33=mysql_query("select * from pages where published='y' order by pageorder asc limit 1");
+		$data33=mysql_query("select * from pages where published='y' and subpage='main' order by pageorder asc limit 1");
 	while($info33=mysql_fetch_array($data33))
 		{	$thispageID=$info33['ID'];
 			$showpage=stripslashes($info33['urltext']);}

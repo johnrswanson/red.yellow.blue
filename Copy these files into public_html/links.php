@@ -71,7 +71,7 @@ echo'" ID="link'.$pageID.'" href="/'.$urltext.'" >'.$title.'</a>';
 
 
 
-$data4=mysql_query("select * from pages where published='y' and subpage='$pageID' order by pageorder ASC");
+$data4=mysql_query("select * from pages where published='y' and subpage='$pageID' order by title ASC");
 $subcount=mysql_num_rows($data4);
 if($subcount!='0')
 			{

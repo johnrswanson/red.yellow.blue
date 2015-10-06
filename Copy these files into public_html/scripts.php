@@ -27,13 +27,49 @@
   	  
   </script>
   
-  <script>
   
   
   
-  </script>
-  
-  
+  <script type="text/javascript">
+    $(document).ready(function () {    
+ $('#linksbar ul li').hover(function(){
+	 
+$('.sublinksbar a', this).slideDown(100);
+   
+}, 
+function(){
+	 
+$('.sublinksbar a', this).fadeOut(200);
+   
+}
+
+); 
+}); 
+ </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {    
+ $('#linksbar_simple ul li').hover(function(){
+	 
+	 	 
+$('.sublinksbar', this).css("height", "auto");
+$('.sublinksbar a', this).slideDown(100);
+   
+}, 
+function(){
+$('.sublinksbar', this).css("height", "0px");
+$('.sublinksbar a', this).fadeOut(200);
+   
+}
+
+); 
+}); 
+ </script>
+ 
+ 
+ 
+   
   <script type="text/javascript">   
     function positionf(e)
     {
