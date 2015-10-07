@@ -241,6 +241,7 @@ a.secretlink:hover{background: none; color:#ccc; border-radius: 0px; border: non
 .xinteractive{float: right ;padding: 0px; margin:0px; background: #f99; padding: 10px; margin: 5px;}
 
 #wrapper{width: 100%; height: 100%;overflow; hidden;}
+#footercontainer{position: absolute; bottom: 0px; clear:both; min-height: 20px; background: none; border: none; width: 100%;}
 
 .linksbarmobile{position: relative;  width: 50px; float:right; top: 0px; right: 1px; min-height: 40px; z-index: 100000; display:none; 
 
