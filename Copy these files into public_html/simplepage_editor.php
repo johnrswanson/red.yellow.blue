@@ -246,7 +246,7 @@ margin:0px;
 opacity:'.$info2['opacity'].';';
 if($mode=='Viewer')	{
 	$file=stripslashes($info2['file']);
-if($file==''){echo'overflow-y:auto;';}
+//if($file==''){echo'overflow-y:auto;';}
 	
 }
 echo'border-radius:'.$info2['radius'].';

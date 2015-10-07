@@ -330,7 +330,7 @@ header{ height: auto;height: auto; }
 	.elements{position:relative; top: 0%;left:0%;  margin: auto; width: 80%; height: auto; min-height: 0px; float:none;}
 	.elements>img{width: 90%; height: auto; margin: auto; }
 	.pictures{width: 90%; min-width: 100%; max-width: 100%; height: auto;min-height: 0px; margin: auto; margin-top: 10px;  }
-
+.linksbarmobile{display:block;}
 	.goodbox{height: 140px; }
 	
 #linksbar{height: 0px; overflow:hidden; }
@@ -350,7 +350,7 @@ header{ height: auto;height: auto; }
 .smallfont{font-size:15px;}
 #linksbar{height: 0px; overflow:hidden; }
 
-
+.logo img{max-height: 50px;}
 
 #headcontainer{ height: auto;}
 header{ height: auto;}
@@ -367,7 +367,8 @@ header{ height: auto;}
 if($mode=='Tablet'){
 	
 	echo'<style>
-	body{}
+	html{height: auto;}
+	body{height: auto;}
 .goodbox{height:auto; }
 #wrapper{max-width:600px; margin: auto; overflow:hidden; border: solid 5px #121212;  border-radius: 20px}
 .elements{position:relative; top: 0%;left:0%;  margin: auto; width: 98%; height: auto; float:none;}
@@ -381,7 +382,7 @@ if($mode=='Tablet'){
 header{ height: auto;}
 .plus{display:block;}
 .pagephoto{width: 90%; overflow: hidden;}
-#maincontent{width:90;}
+
 .pagephoto{width: 360px; position: absolute;}
 .col{width: 100%;}
 </style>
@@ -392,7 +393,8 @@ header{ height: auto;}
 if($mode=='Phone'){
 	
 	echo'<style>
-	body{}
+	html{height: auto;}
+	body{height: auto;}
 .goodbox{height:auto; }
 #wrapper{max-width:320px; margin: auto; overflow:hidden; border: solid 5px #121212; border-radius: 20px}
 #maincontent{width:100%;}
@@ -408,7 +410,7 @@ if($mode=='Phone'){
 header{ height: auto;}
 .plus{display:block;}
 .pagephoto{width: 100%; overflow: hidden;}
-#maincontent{width:90;}
+.logo img{max-height: 50px;}
 .pagephoto{width: 320px; position: absolute;}
 .col{width: 100%;}
 </style>
