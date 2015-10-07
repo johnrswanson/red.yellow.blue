@@ -88,7 +88,7 @@ include('./links.php');
 
 <?
 //////INTERACTIVE
-echo'<div id="interactive" style="z-index: 100000">';
+echo'<div id="interactive" style="z-index: 100000;">';
 echo'<div class="xinteractive"><a href="" onclick="return false">X</a></div>';
 echo'<div class="layer">
 <div style="color: red; font-size: 30px;">The LAYER IS EMPTY</div>';
@@ -96,7 +96,7 @@ echo'</div></div>';//end Interactive
 
 
 
-echo'<div id="interactive2" style=z-index: 100000">';
+echo'<div id="interactive2" style="z-index: 100000;">';
 echo'<div class="xinteractive"><a href="" onclick="return false">X</a></div>';
 echo'<div class="layer">
 <div style="color: red; font-size: 30px;">The LAYER IS EMPTY</div>';
