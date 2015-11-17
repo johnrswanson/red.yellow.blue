@@ -141,22 +141,8 @@ include('./connect.php');
 $thispage=$_GET['page'];
 
 //echo $thispage;
-$free_elements='20';
-$free_pages='4';
 
 
-if($paid!='y'){
-$data22=mysql_query("select * from page_element where pageID='$thispage' ");
-$count=mysql_num_rows($data22);
-//echo $count;
-if ($count>=$free_elements){echo'<b>Free Account:</b>
- <p>'.$free_elements.' things per page.<br> 
-'.$free_pages.' pages. For Now....
-</p> <p><a class="button" href="/welcome/services/"><b>Sign up for a paid account.</b></a><br>
-  Get Unlimited things on your page, and unlimited pages  ';
-exit;}
-if ($count<='$free_elements'){ }
-}
 echo'<div style="margin-top: -20px; padding-left: 20px;">Add Content</div>';
 echo'<div style="float:left; auto min-height:250px; margin: auto; text-align: center;">'; 
 echo'<div class="flippers">';

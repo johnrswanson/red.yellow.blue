@@ -83,8 +83,8 @@ if(isset($_COOKIE['ID_my_site']))
 include('./links.php');  
 ?>
 </header>
-</div> <!--headercontainer-->';
-
+	
+	</div> 
 
 <?
 //////INTERACTIVE
