@@ -17,6 +17,6 @@ mysql_select_db($dbname);
 
 
 //IMPORTANT
-//ONCE YOU HAVE ADDED THESE 4 Variables, you must drop this file into the  admin  directory
+//ONCE YOU HAVE ADDED THESE 4 Variables, you must drop this file into the same folder as ~/index.php
 
 ?>
