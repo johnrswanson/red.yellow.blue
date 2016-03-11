@@ -62,7 +62,7 @@ Step 4: Go to http://YOUR-URL/register.php in a web browser and Create an Admini
 
 Step 5: You can now begin to use Red.Yellow.Blue to design and manage your website.
 
-        Go to http://YOUR-URL/login.php
+        Go to http://YOUR-URL/?go=admin
         Click the 3-Color Menu in the upper left hand corner of your screen to add your first page. 
 
 
