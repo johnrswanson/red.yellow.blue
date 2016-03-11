@@ -1,6 +1,6 @@
 # Red Yellow Blue
 
- A is a delightfully simple web design / development tool and Content management system. 
+ A delightfully simple web design / development tool and Content management system. 
 
 
       Features include:
