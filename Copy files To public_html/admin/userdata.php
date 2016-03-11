@@ -5,21 +5,18 @@ include('../connect.php');
 
 $trick=$_GET['cssonly'];
 
-
-if (isset($_COOKIE['ID_myapp']))
-	{ 
-	$email = $_COOKIE['ID_myapp']; 
-	$pass = $_COOKIE['Key_myapp'];
-
-$query = mysql_query("SELECT * FROM admin WHERE email = '$email' ") or die(mysql_error());
-}
-
-else
-{
-	
-	if ($trick=='true'){
-	$query = mysql_query("SELECT usercss FROM admin ") or die(mysql_error());
+if ($trick=='true'){
+	$query = mysql_query("SELECT usercss FROM admin") or die(mysql_error());
 	}
+	else{
+
+		if (isset($_COOKIE['ID_myapp']))
+		{ 
+			$email = $_COOKIE['ID_myapp']; 
+			$pass = $_COOKIE['Key_myapp'];
+			$query = mysql_query("SELECT * FROM admin WHERE email = '$email' ") or die(mysql_error());
+		}
+	
 	
 }
 	
