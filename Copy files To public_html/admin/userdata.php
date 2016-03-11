@@ -18,7 +18,7 @@ else
 {
 	
 	if ($trick=='true'){
-	$query = mysql_query("SELECT * FROM admin ") or die(mysql_error());
+	$query = mysql_query("SELECT usercss FROM admin ") or die(mysql_error());
 	}
 	
 }
