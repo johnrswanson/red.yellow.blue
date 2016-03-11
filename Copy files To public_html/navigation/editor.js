@@ -362,9 +362,7 @@
 					'position : absolute' + ';' +
 					'top: ' + ldat.posx + 'px;' +
 					'left:' + ldat.posy + 'px;' +
-					'font-size:' + ldat.fontsize + 'px;' +
-					'background: ' + ldat.background + ';' +
-					
+					'font-size:' + ldat.fontsize + 'px;' +					
 					'line-height:' + ldat.fontsize 	+ 'px;' +
 					'letter-spacing: ' + ldat.spacing + 'px;' +
 					'color: ' + ldat.color 	+ ';' +
@@ -382,7 +380,8 @@
 					'padding:' + ldat.padding + 'px;' +
 					'background: ' + ldat.background + ';' +
 					'position:relative;'+
-					'height: inherit;' +
+					'height: auto;' +
+					
 					'z-index: ' + ldat.layer + ';' +
 					'opacity: ' + ldat.opacity  + ';' +
 					'border-radius: ' + ldat.radius + 'px;' +
@@ -477,7 +476,7 @@
 					start: function( event, ui ) {
 						$('.element_'+ldat.ID).css("min-height", "0px");
 						
-						$('.pagecontent'+ldat.ID).css("min-height", "0px");
+						$('#pagecontent'+ldat.ID).css("height", "inherit");
 						$('.elements').css('box-shadow', '0px 0px 0px 0px #fff');
 						$(this).css('box-shadow', '0px 0px 1px 1px #00F');
 							

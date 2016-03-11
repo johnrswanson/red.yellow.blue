@@ -187,9 +187,9 @@
 						'top: ' + ldat.posx + 'px;' +
 						'left:' + ldat.posy + 'px;' +
 						'font-size:' + ldat.fontsize + 'px;' +
-						'background: ' + ldat.background + ';' +
+						
 						'border-radius: ' + ldat.radius + 'px;' +
-						'padding:' + ldat.padding + 'px;' +
+						
 						'line-height:' + ldat.fontsize 	+ 'px;' +
 						'letter-spacing: ' + ldat.spacing + 'px;' +
 						'color: ' + ldat.color 	+ ';' +
@@ -202,7 +202,10 @@
 						
 						'margin:0px;'+
 						'}' +
-						'.pagecontent'+ldat.ID+'{' +
+						
+						'#pagecontent'+ldat.ID+'{' +
+						'padding:' + ldat.padding + 'px;' +
+						'background: ' + ldat.background + ';' +
 						'position:relative;'+
 						'z-index: ' + ldat.layer + ';' +
 						'opacity: ' + ldat.opacity  + ';' +	
