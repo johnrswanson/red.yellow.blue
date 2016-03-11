@@ -1,6 +1,6 @@
-# red.yellow.blue
+# Red Yellow Blue
 
-Red Yellow Blue is a delightfully simple web design / development tool and Content management system. 
+ A is a delightfully simple web design / development tool and Content management system. 
 
 
       Features include:
