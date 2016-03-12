@@ -29,7 +29,7 @@
 	
 	
 	window.showPages= function (){
-		
+			$("#navcontent").fadeOut(0);
 		var url="navigation/data.php";		
 		$("#navcontent").html('');
 		$("#navcontent").html('<ul></ul>');
@@ -50,7 +50,7 @@
 				'');
 		});
 		
-		
+			$("#navcontent").fadeIn(1500);
 	}
 	
 	
@@ -149,7 +149,7 @@
 	
 	
 	window.loadPage= function (pageID){
-	
+			$("#page").fadeOut(0);
 			window.closehelper();
 			$("#page").html('<i class="fa fa-circle-o-notch fa-spin"></i>');
 			
@@ -323,7 +323,7 @@
 				
 		$("#page").css("min-height","0px");
 		$("#page").css("height","auto");
-		
+				$("#page").fadeIn(1500);
 	}
 	
 	window.loadCss = function(){

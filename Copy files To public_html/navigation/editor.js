@@ -324,7 +324,7 @@
 
 
 	window.loadPage= function (pageID){
-	
+	$("#page").fadeOut(0);
 		if (pageID=='home'){
 			window.loadHomePage();	
 			}
@@ -639,9 +639,11 @@
 			});
 					
 		}			
-
+$("#page").fadeIn(1500);
 
 	}//loadpage
+	
+	
 	
 		window.savepageDetails = function (){	
 	
