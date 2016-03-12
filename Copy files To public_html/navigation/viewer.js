@@ -17,9 +17,9 @@
 			$.each(json.navinfo,function(i,ldat){
 				if( x=='1'){ 
 					x='2'; 
-					var home = ''+ldat.ID+'';
+					var mydefaultpage = ''+ldat.ID+'';
 					
-					loadPage(''+ home +'');
+					loadPage(''+ mydefaultpage +'');
 				}	
 
 			});	
@@ -30,12 +30,11 @@
 	
 	window.showPages= function (){
 		
-		var x = 0;
-		var home='';
 		var url="navigation/data.php";		
 		$("#navcontent").html('');
 		$("#navcontent").html('<ul></ul>');
 		$.getJSON(url,function(json){
+			var x = 0;
 			$.each(json.navinfo,function(i,ldat){
 				x=x+1;
 				$("#navcontent>ul").append(''+
@@ -44,13 +43,13 @@
 					'<i class="fa fa-remove"></i></a>'+
 					'<a href="#'+ldat.title+'" onclick="">'+ldat.title+'</a> ' + 
 					'</li>');	
-			});	//each
+			});		
 			var linkwidth= 100/ x;
-				
-			$("#page").append(''+
+		$("#navcontent").append(''+
 				'<style>#navcontent>ul>li{width:'+linkwidth+'%; float:left; text-align:center;}</style>'+
 				'');
 		});
+		
 		
 	}
 	
@@ -65,14 +64,14 @@
 		'<div id="navcontent"></div>'+
 		
 		'<div id="navadd"></div>'+	
-		'<div id="usercss"></div>'+
+		
 		'</div><div style="clear:both; height:10px; width:100% "></div>');
 
 		var url="navigation/customstyle.php";
 		var mybanner='';
 		$.getJSON(url,function(json){
 			$.each(json.cssinfo,function(i,bdat){
-				$('#page').append('<style>'+
+				$('#navcontent').append('<style>'+
 				'#header{background:'+bdat.bannercolor+';} .link a{color:'+bdat.linkcolor+'; font-size: '+bdat.linksize+'; font-family: '+bdat.linkfont+';} .link a:hover{color:'+bdat.hovercolor+'}'+
 				'</style>');
 				$("#logo").html('');
@@ -150,18 +149,10 @@
 	
 	
 	window.loadPage= function (pageID){
-		
-		if (pageID=='home'){
-			window.loadHomePage();		
-		}	
-		
-		else{
-			window.logo();
-			window.showPages();
-			window.loadCss();
+	
 			window.closehelper();
 			$("#page").html('<i class="fa fa-circle-o-notch fa-spin"></i>');
-			var login='y';
+			
 			$("#page").html('<div ID="bg"></div> ');
 			var url="navigation/data.php?page="+pageID+"";
 			$.getJSON(url,function(json){
@@ -329,7 +320,7 @@
 				$(this).find('.editbutton').show(0).zIndex(10000000);
 				$(this).find('.ui-resizable-handle, .ui-resizable-se, .ui-icon, .ui-icon-gripsmall-diagonal-se').show(0);
 			});			
-		}			
+				
 		$("#page").css("min-height","0px");
 		$("#page").css("height","auto");
 		

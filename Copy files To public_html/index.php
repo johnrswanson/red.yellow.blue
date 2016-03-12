@@ -8,18 +8,8 @@
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="380" content="width=device-width, user-scalable=no" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
-
-
-	
-
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/spectrum.css">
-<link rel="stylesheet" href="admin/style.css">
-
-
 </head>
 <body>
 
@@ -83,7 +73,23 @@
  
 </style>
 <div class="boxdimmer"><div ID="boxitem"></div></div>
+
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/spectrum.css">
+<link rel="stylesheet" href="admin/style.css">
+
 <div id="userCss"></div>
+
+<script>
+$(function(){
+	window.logo();
+	
+	window.showPages();
+		window.loadCss();
+	});
+</script>
+	
 <script>
 $(function(){
 
@@ -91,19 +97,39 @@ $(function(){
   // hash and adds the class "selected" to any matching nav link.
   $(window).hashchange( function(){
     var hash = location.hash;
-    if(hash==''){	window.loadPage('home');}
-    // Set the page title based on the hash.
-    document.title = '' + ( hash.replace( /^#/, '' ) || 'Red.Yellow.Blue' ) + '';
     
+    // Set the page title based on the hash.
+  if(hash==''){
+	var url="navigation/data.php";
+	var x='1';	
+	$.getJSON(url,function(json){
+		$.each(json.navinfo,function(i,ldat){
+			if( x=='1'){ 
+				x='2'; 
+				mydefaultpage = ''+ldat.ID+'';
+				
+				loadPage(''+ mydefaultpage +'');
+			
+			}	
+
+		});	
+	});
+}
+	     
+  if(hash!='' ){ document.title = '' + ( hash.replace( /^#/, '' ) || 'welcome' ) + '';
+	 
+ 
+ 
     
 	var url="navigation/data.php?pageurl="+document.title;
 		
 		$.getJSON(url,function(json){
 			$.each(json.navinfo,function(i,dat){
 				  window.loadPage(''+dat.ID+'');
+				 
   			});
   		});
-  
+  }
     // Iterate over all nav links, setting the "selected" class as-appropriate.
      
 });

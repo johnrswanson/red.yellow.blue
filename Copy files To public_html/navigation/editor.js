@@ -169,7 +169,7 @@
 			});	//each
 			var linkwidth= 100/ x;
 			
-			$("#page").append(''+
+			$("#navcontent").append(''+
 			'<style>#navcontent>ul>li{width:'+linkwidth+'%; float:left; text-align:center;}</style>'+
 			'');
 		});//get
@@ -230,7 +230,7 @@
 		var mybanner='';
 		$.getJSON(url,function(json){
 			$.each(json.cssinfo,function(i,bdat){
-				$('#page').append('<style>'+
+				$('#navcontent').append('<style>'+
 				'#header{background:'+bdat.bannercolor+';} .link a{color:'+bdat.linkcolor+'; font-size: '+bdat.linksize+'; font-family: '+bdat.linkfont+';} .link a:hover{color:'+bdat.hovercolor+'}'+
 				'</style>');
 				$("#logo").html('');
@@ -330,9 +330,7 @@
 			}
 			
 		else{
-			window.logo();
-			window.showPages();
-			window.loadCss();
+			
 			window.closehelper();
 			$("#page").html('<i class="fa fa-circle-o-notch fa-spin"></i>');
 			var login='y';
