@@ -45,7 +45,7 @@ $shortname=addslashes($_POST['shortname']);
 
 mysql_query("INSERT INTO admin (ID, email, password, shortname) VALUES ('', '$email', '$pass', '$shortname' ) ") or die(mysql_error());
 mysql_query("INSERT INTO stylesheet (ID) VALUES ('') ") or die(mysql_error());
-mysql_query("INSERT INTO pages (ID, title) VALUES ('', 'Home') ") or die(mysql_error());
+mysql_query("INSERT INTO pages (ID, title, published, pageorder) VALUES ('', 'Home', 'y','1') ") or die(mysql_error());
 
 		$hour = time() + 1000000; 
 		setcookie(ID_myapp, $_POST['email'], $hour, "/"); 

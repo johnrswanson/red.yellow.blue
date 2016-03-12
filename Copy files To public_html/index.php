@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Web-elements</title>
+	<title>Red.Yellow.Blue</title>
 	
 <!--IPHONE-->
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -93,7 +93,7 @@ $(function(){
     var hash = location.hash;
     if(hash==''){	window.loadPage('home');}
     // Set the page title based on the hash.
-    document.title = '' + ( hash.replace( /^#/, '' ) || 'Welcome' ) + '';
+    document.title = '' + ( hash.replace( /^#/, '' ) || 'Red.Yellow.Blue' ) + '';
     
     
 	var url="navigation/data.php?pageurl="+document.title;
