@@ -149,7 +149,7 @@
 
 	
 	window.showPages= function (){
-		
+	
 		var x = 0;
 		var home='';
 		var url="navigation/data.php";
@@ -185,6 +185,7 @@
 				});
 			}
 		});
+	
 	}
 	
 

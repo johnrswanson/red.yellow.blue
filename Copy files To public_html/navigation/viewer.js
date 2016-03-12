@@ -29,7 +29,7 @@
 	
 	
 	window.showPages= function (){
-			$("#navcontent").fadeOut(0);
+			
 		var url="navigation/data.php";		
 		$("#navcontent").html('');
 		$("#navcontent").html('<ul></ul>');
@@ -50,8 +50,7 @@
 				'');
 		});
 		
-			$("#navcontent").fadeIn(1500);
-	}
+				}
 	
 	
 	window.logo= function(){
