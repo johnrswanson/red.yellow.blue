@@ -177,9 +177,6 @@
 						'top: ' + ldat.posx + 'px;' +
 						'left:' + ldat.posy + 'px;' +
 						'font-size:' + ldat.fontsize + 'px;' +
-						
-						'border-radius: ' + ldat.radius + 'px;' +
-						
 						'line-height:' + ldat.fontsize 	+ 'px;' +
 						'letter-spacing: ' + ldat.spacing + 'px;' +
 						'color: ' + ldat.color 	+ ';' +
@@ -187,16 +184,17 @@
 						'font-weight: ' + ldat.fontweight + ';' +
 						'float: none; ' +
 						'text-align: ' + ldat.textalign+';' +
-						'padding-bottom:' + ldat.padding + 'px;' +
 						'width:	' + ldat.absw + ';' +
+						'height:auto;'+
+						'border-radius: ' + ldat.radius + 'px;' +
 						
-						'margin:0px;'+
 						'}' +
 						
 						'#pagecontent'+ldat.ID+'{' +
 						'padding:' + ldat.padding + 'px;' +
 						'background: ' + ldat.background + ';' +
 						'position:relative;'+
+						'height:auto;'+
 						'z-index: ' + ldat.layer + ';' +
 						'opacity: ' + ldat.opacity  + ';' +	
 						'border-radius: ' + ldat.radius + 'px;' +
@@ -207,8 +205,9 @@
 					$("#page").append(''+
 					'<div class="elements element_'+ldat.ID+'" ID="element_'+ldat.ID+'" ></div>' );
 					
-					$("#element_"+ldat.ID).append(''+	
-						'<div class="editbutton" ID="editbutton'+ldat.ID+'">' +
+					
+						$("#element_"+ldat.ID).append(''+	
+						/*'<div class="editbutton" ID="editbutton'+ldat.ID+'">' +
 						'<div class="hideEdit" style="float:left;"><a  href="#" onclick="hideEdit(); return false;"><i class="fa fa-minus-circle" style=" width:25px; margin-right:20px"></i></div>'+
 							'<div class="mover"  style="float:left;"> ' +
 							'<i class="fa fa-arrows"></i>'+
@@ -216,12 +215,13 @@
 							'<div class="stacker"  style="float:left;"> ' +
 							'<i class="fa fa-arrows-v"></i>'+
 							'</div>'+
-							'</div><div class="pagecontents pagecontent'+ldat.ID+'" ID="pagecontent'+ldat.ID+'"></div>');
+							'</div>'+
+							*/
+							'<div class="pagecontents pagecontent'+ldat.ID+'" ID="pagecontent'+ldat.ID+'"></div>');
 							
 				
-							
-					
-						$("#editbutton"+ldat.ID).append(''+
+						/*
+							$("#editbutton"+ldat.ID).append(''+
 							'<a class="editelement nodrag" ID="edit'+ldat.ID+' edit" href="#" '+
 								'onclick="editElement( '+ ldat.ID + '); return false;">'+
 								'<i class="fa fa-pencil"></i></a>'+
@@ -244,7 +244,7 @@
 								'<i class="fa fa-trash"></i></a><br><div class="newitem"></div>'+
 							'');
 							
-					
+					*/
 							
 					if (ldat.file != ''){
 						$(".pagecontent"+ldat.ID).append('<img src="img/full/'+ldat.file+'" style="width: 100%; ">');
@@ -252,7 +252,7 @@
 					}
 						
 					else {
-						$(".pagecontent"+ldat.ID).append(''+ldat.pagecontent+'<br>');	
+						$(".pagecontent"+ldat.ID).append('<div class="textcontent">'+ldat.pagecontent+'</div>');	
 					}
 					if (ldat.boxID != ''){
 						var url="navigation/boxelements.php?box="+ldat.boxID+"";
