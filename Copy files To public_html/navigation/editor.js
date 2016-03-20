@@ -1498,7 +1498,7 @@ window.changeBgNow= function(pageID){
 		'<input type="hidden" name="pageID" value="'+ pageID +'" >'+
 		'<input type="color" name="color" ID="bgcolorpick" ><br>'+
 		'<input type="button" name="submit" value="Save" onclick="changeBgNow('+ pageID +');">'+
-		'</form><div ID="bgtoggle"><a href="#" onclick="addBgPhoto('+ pageID +')">Use Photo</a></div>');
+		'</form><div ID="bgtoggle"><a href="#" onclick="addBgPhoto('+ pageID +'); return false;">Use Photo</a></div>');
 		
 		  $("#bgcolorpick").spectrum({
 		
@@ -1542,7 +1542,9 @@ window.changeBgNow= function(pageID){
 				
 			}
 		}).done(function(){
-			window.loadPage(''+pageID+'');	
+			window.logo();	
+			window.showPages();	
+			window.secret();		
 			});
 			
 
@@ -1551,7 +1553,7 @@ window.changeBgNow= function(pageID){
 		
 			window.addBannerColor= function(pageID){	
 		
-		$("#bannertoggle").html('<a href="#" onclick="addLogo('+pageID+')">Use Photo</a>');
+		$("#bannertoggle").html('<a href="#" onclick="addLogo('+pageID+'); return false">Use Photo</a>');
 		
 		$("#addLogo").html('<i class="fa fa-list-alt"></i> Site Banner<br>'+
 		'<form ID="addform">'+
@@ -1559,7 +1561,7 @@ window.changeBgNow= function(pageID){
 		'<input type="hidden" name="pageID" value="'+ pageID +'" >'+
 		'<input type="color" name="color" ID="bannercolorpick" ><br>'+
 		'<input type="button" name="submit" value="Save" onclick="addLogoNow('+ pageID +');">'+
-		'</form><div ID="bannertoggle"><a href="#" onclick="addLogo('+ pageID +')">Use Photo</a></div>');
+		'</form><div ID="bannertoggle"><a href="#" onclick="addLogo('+ pageID +'); return false">Use Photo</a></div>');
 		
 		  $("#bannercolorpick").spectrum({
 		
@@ -1606,7 +1608,8 @@ window.changeBgNow= function(pageID){
 				
 			}
 		}).done(function(){
-			window.loadPage(''+pageID+'');	
+			window.showPages();	
+			window.secret();	
 			});
 			
 	
@@ -1616,6 +1619,8 @@ window.changeBgNow= function(pageID){
 	
 	
 	window.addLinkColor= function(pageID){	
+		
+		
 		window.resetMenu(''+pageID+'');		
 		$("#addLinkColor").css("background", "#dddddd");
 		$("#addLinkColor").html('<i class="fa fa-star"></i>Link Style<br>'+
