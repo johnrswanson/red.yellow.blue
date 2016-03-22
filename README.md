@@ -1,4 +1,4 @@
-# Red Yellow Blue
+# Red Yellow Blue (version 2)
 
  A delightfully simple web design / development tool and Content management system. 
 
