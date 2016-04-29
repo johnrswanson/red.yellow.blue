@@ -3,7 +3,7 @@ include('../connect.php');
 $boxitem=addslashes($_GET['boxitem']);
 
 if($boxitem!=''){
-	$query = mysql_query("SELECT * FROM blog_photos where blogID='$boxitem' order by photoorder asc ")or die(mysql_error());
+	$query = mysql_query("SELECT * FROM blog_photos where blogID='$boxitem' order ID desc ")or die(mysql_error());
 	}
 	
 

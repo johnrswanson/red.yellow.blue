@@ -277,6 +277,7 @@
 
 	window.loadContent= function(contentID){
 		window.hideEdit();
+		$("#boxitem").html('');
 		$("#boxitem").fadeIn(100);
 		var url="navigation/boxelements.php?be="+ contentID+'';
 		$.getJSON(url,function(json){
@@ -291,35 +292,40 @@
 				
 				if(bdat.title!=''){
 					$('#boxitem').append(''+
-					'<h4>'+bdat.title+'</h4>'+
+					'<div class="boxelementtitle"><b>'+bdat.title+'</div>'+
 					'');
 				}
 				
 				if(bdat.mytext!=''){
 				$('#boxitem').append(''+
-				'<br> '+bdat.mytext+''+
+				'<div class="shorttext"><b>'+bdat.mytext+'</div>'+
 				'');
 				}
+				
+				
+								
+				if(bdat.myfulltext!=''){
+				$('#boxitem').append(''+
+				'<div class="fulltext"> '+bdat.myfulltext+'</div>'+
+				'');
+				}
+
+			
+
 				
 				var url="navigation/boxphotos.php?boxitem="+ bdat.ID+'';
 				$.getJSON(url,function(json){
 					$.each(json.photoinfo,function(i,idat){
 						$('#boxitem').append(''+
-						'<img class="boxfullphoto" src="img/full/'+idat.photo+'" style="max-width: 1000px; min-height: 500px;  margin: auto;">');
-						});
+							'<div ID="boxphoto_'+idat.ID+'"><a style="float:left; background: #fff; color: #000; " href="#" onclick="deleteBlogPhoto('+idat.ID+')"><i class="fa fa-trash"></i></a><img class="boxfullphoto" src="img/full/'+idat.photo+'" '+
+							'style="max-width: 1000px; min-height: 500px;  margin: auto;"></div>');
 					});
+						
+						
+				});
 					
-				$('#boxitem').append(''+
-				'<form ID="addblogphoto" style="position: relative ; top: auto;  z-index: 10000;"></form>'+
-				'');
 				
-				$('#addblogphoto').html(''+
-				'Add More Photos<br>'+
-				'<input type="hidden" name="boxphotos" value="add">'+
-				'<input type="hidden" name="contentID" value="'+ contentID +'" >'+
-				'<input type="file" name="file" accept="image/*;capture=camera"> '+
-				'<input type="button" name="submit" value="Add" onclick="addblogphotoNow('+ contentID +');">'+
-				'<style>#details{height: 1000px; display: block}</style>');
+			
 				
 			});
 
@@ -934,26 +940,50 @@ $("#page").fadeIn(1500);
 				
 				var str = idat.mytext;
 				var safetext= str.replace(/<br>/g, "\r");
+				var fullstr = idat.myfulltext;
+				var safefulltext= fullstr.replace(/<br>/g, "\r");
 			
+
 			
 				$("#lightbox>#content").append(''+
 				
-					'<form  ID="formElement">'+
-					'<input type="hidden" name="editboxitem" value="'+boxelementID+'">'+
-					//'<input type="hidden" name="pageID" value="'++'"></form>'+
+					'<form  style="background: #eee;color: #333; border-radius: 5px; font-family: helvetica; text-align: left; padding: 5px;" ID="formElement">'+
+					'<input type="hidden" name="editboxitem" value="'+boxelementID+'"></form>'+
 					'');
 					
 					
 		$("#formElement").append(''+
-		'<input type="text" name="title" value="'+idat.title+'">'+
-			'<textarea style="width: 100%; max-width: 100% ; min-height: 100px; margin: auto;" name="mytext"> '+safetext+'</textarea>'+
-			'<span style="font-size: 12px; color: #fff">Replace Photo<br> <input type="file" name="file"  accept="image/*;capture=camera"> </span>'+
-			'<input style="  " ID="saveedit" type="button" name="submit" '+
-						'value="Save" onclick="editboxitemNow('+boxelementID+'); ">'+
-					
-				'');
+		'Title<br><input type="text" style="width: 100%;" name="title" value="'+idat.title+'">'+
+			'<br>Caption<br><textarea style="width: 100%; max-width: 100% ; min-height: 30px; margin: auto;" name="mytext" placeholder="Enter a caption for this item" > '+safetext+'</textarea>'+
+			'<br>Full Text<br><textarea style="width: 100%; max-width: 100% ; min-height:100px; margin: auto;" name="myfulltext" placeholder="Text entered here will be visible after a visitor clicks this item."> '+safefulltext+'</textarea>'+
+			
+			'<div class="boxphotothumb"></div><span style="font-size: 20px; color: #000 font-family: helvetica">Edit Cover Photo</span><br> '+
+			'<input type="file" name="file"  accept="image/*;capture=camera"> '+
+		
+					'<input style="  " ID="saveedit" type="button" name="submit" '+
+			'value="Save Item Now" onclick="editboxitemNow('+boxelementID+'); ">'+
+			'');
 				
+			
+				
+				if(idat.photo != ''){
+					
+			$('.boxphotothumb').append('<img src="/img/full/'+idat.photo+'" width="200px">');
+			
+			$('#lightbox>#content').append(''+
+			'<form class="addtobox" ID="addblogphoto" style="position: relative ; top: auto;  background: #eee; color: #000; font-family: helvetica; border-radius: 5px; z-index: 10000;"></form>'+
+				'');
 
+				$('#addblogphoto').html(''+
+				'<br><b>Or Add More Photos...</b><br>'+
+				'<input type="hidden" name="boxphotos" value="add">'+
+				'<input type="hidden" name="contentID" value="'+ boxelementID +'" >'+
+				'<input type="file" name="file" accept="image/*;capture=camera"> '+
+				'<input type="button" name="submit" value="Upload" onclick="addblogphotoNow('+ boxelementID +'); return false;">'+
+				'<style>#details{height: 1000px; display: block}</style>'+
+				'');
+				}
+				
 	});
 	
 	});
@@ -1265,6 +1295,18 @@ window.deletePage = function (itemID) {
 
 
 	
+	window.deleteBlogPhoto = function (photoID) {
+		$('#boxphoto_'+photoID+'').slideUp(300);
+		$.post('navigation/confirm.php', { deleteblogphoto: photoID },
+		function () {
+				// 200, it worked; resource deleted
+				}, function () {
+					// it didn't delete			
+					});
+	}	
+	
+
+
 	
 		
 	window.addPage = function (){	

@@ -25,6 +25,10 @@ CREATE TABLE IF NOT EXISTS `box_element` (
   `photo` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `boxelementorder` varchar(255) NOT NULL,
+  `fulltext` longtext NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `map` longtext NOT NULL,
+  `video` longtext NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -106,6 +110,7 @@ CREATE TABLE `blog_photos` (
   `blogID` varchar(255) NOT NULL,
   `photo` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `photoorder` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 

@@ -13,6 +13,7 @@ $update=$_POST['update'];
 $deletepage=$_POST['deleteme'];
 $deleteelement=$_POST['deleteelement'];
 $deleteboxelement=$_POST['deleteboxelement'];
+$deleteblogphoto=$_POST['deleteblogphoto'];
 $editme=$_POST['ID'];
 $css=$_POST['css'];
 $bgphoto=$_POST['bgphoto'];
@@ -281,8 +282,15 @@ if ($editboxitem!=''){
 
 	
 	$title=addslashes($_POST['title']);
+	$video=addslashes($_POST['video']);
+	$map=addslashes($_POST['map']);
+	$price=addslashes($_POST['price']);
 	$newtext = str_replace("\r",'<br>',$_POST['mytext']);			
 	$cleantext=addslashes($newtext);
+	
+	$newfulltext = str_replace("\r",'<br>',$_POST['myfulltext']);			
+	$cleanfulltext=addslashes($newfulltext);
+
 	$photo=addslashes($_FILES[file][name]);
 	if($photo!=''){
 		$photo.=date("m.d.yg:i:sa");
@@ -316,10 +324,12 @@ if ($editboxitem!=''){
 			
 		}
 	}
-	mysql_query("update box_element set  title= '$title' where ID = '$editboxitem ' limit 1 ") or die (mysql_error());
-mysql_query("update box_element set  mytext= '$cleantext' where ID = '$editboxitem ' limit 1 ") or die (mysql_error());
-
-
+	mysql_query("update box_element set title= '$title' where ID = '$editboxitem' limit 1 ") or die (mysql_error());
+	mysql_query("update box_element set mytext= '$cleantext' where ID = '$editboxitem' limit 1 ") or die (mysql_error());
+	mysql_query("update box_element set myfulltext= '$cleanfulltext' where ID = '$editboxitem' limit 1 ") or die (mysql_error());
+	mysql_query("update box_element set video= '$video' where ID = '$editboxitem' limit 1 ") or die (mysql_error());
+	mysql_query("update box_element set map= '$map' where ID = '$editboxitem' limit 1 ") or die (mysql_error());
+	mysql_query("update box_element set price= '$price' where ID = '$price' limit 1 ") or die (mysql_error());
 	}
 	
 	
@@ -423,6 +433,11 @@ if ($deleteelement!=''){
 if ($deleteboxelement!=''){	
 	$delete = mysql_query("delete from box_element where ID='$deleteboxelement' limit 1");
 	echo 'BoxItem Deleted Successfully';
+}
+
+if ($deleteblogphoto!=''){	
+	$delete = mysql_query("delete from blog_photos where ID='$deleteblogphoto' limit 1");
+	echo 'Blog Photo Deleted Successfully';
 }
 
 	
