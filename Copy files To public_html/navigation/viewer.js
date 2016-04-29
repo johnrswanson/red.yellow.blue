@@ -114,16 +114,24 @@
 					'<img class="boxfullphoto" src="img/full/'+bdat.photo+'" style="max-width: 1000px; min-height: 500px;  margin: auto;">');
 				}
 					
-				if(bdat.title!=''){
+					if(bdat.title!=''){
 					$('#boxitem').append(''+
-					'<h4>'+bdat.title+'</h4>'+
+					'<div class="boxelementtitle"><b>'+bdat.title+'</div>'+
 					'');
 				}
-					
+				
 				if(bdat.mytext!=''){
-					$('#boxitem').append(''+
-					'<br> '+bdat.mytext+''+
-					'');
+				$('#boxitem').append(''+
+				'<div class="shorttext"><b>'+bdat.mytext+'</div>'+
+				'');
+				}
+				
+				
+								
+				if(bdat.myfulltext!=''){
+				$('#boxitem').append(''+
+				'<div class="fulltext"> '+bdat.myfulltext+'</div>'+
+				'');
 				}
 				
 				var url="navigation/boxphotos.php?boxitem="+ bdat.ID+'';
