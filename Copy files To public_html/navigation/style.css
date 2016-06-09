@@ -175,8 +175,8 @@ ul#boxlist{
 }
 
 #lightbox{
-	position:fixed;
-	 top:100px; 
+	position:absolute;
+	 top: 0px;
     left:10%;
     width:auto;
     height: auto;

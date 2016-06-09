@@ -419,7 +419,7 @@
 					
 				$("#editbutton"+ldat.ID).append(''+
 					'<a class="editelement nodrag" ID="edit'+ldat.ID+' edit" href="#" '+
-						'onclick="editElement( '+ ldat.ID + '); helperadd(); return false;">'+
+						'onclick="editElement( '+ ldat.ID + '); helperadd('+ ldat.posx + ', '+ ldat.posy + ' ); return false;">'+
 						'<i class="fa fa-pencil"></i>'+
 					'</a>'+
 				'');
@@ -564,13 +564,30 @@
 				
 				
 	if (ldat.boxID != ''){
+		
 		var url="navigation/boxelements.php?box="+ldat.boxID+"";
 			$( '.pagecontent' +ldat.ID).append('<ul ID="boxlist"></ul>');
-		$.getJSON(url,function(json){
-			$.each(json.boxiteminfo,function(i,bdat){
-				var setter= ldat.columnset * 4;
-				var spacers= 100 - setter;
-				var colwidth= spacers / ldat.columnset;
+				$.getJSON(url,function(json){
+					var rank=0;
+					var row=-1;
+					$.each(json.boxiteminfo,function(i,bdat){
+						var setter= ldat.columnset * 4;
+						var spacers= 100 - setter;
+						var colwidth= spacers / ldat.columnset;
+						
+						rank++;
+						if (rank == ldat.columnset){
+							rank=0;
+							row++;
+						}
+						
+						
+						var guessheight= colwidth / 3;
+						//var getter= rank - ldat.columnset;
+						//var order = getter + row ;
+						var mult = row * guessheight;
+						
+						var myboxheight = ldat.posx + mult;
 			
 				$( ".pagecontent"+ldat.ID+" > ul" ).append(''+
 					'<li  ID="boxelement_'+bdat.ID+'" class="boxelement_'+bdat.ID+' boxelements" style=" float: left; text-align: inherit; margin:1%; padding:1%;" onclick="showBoxEdit('+bdat.ID+'); return false"></li>'+
@@ -581,7 +598,7 @@
 					'<div class="boxmover" style="float:left;font-size: 25px; margin color:#333;"> ' +
 						'<i class="fa fa-arrows"></i>'+
 					'</div>'+
-					'<a href="" onclick="editBoxElement('+bdat.ID+'); return false;"><i class="fa fa-pencil"></i>edit</a>'+
+					'<a href="" onclick="editBoxElement('+bdat.ID+'); helperadd('+myboxheight+', '+ldat.posy+'); return false;"><i class="fa fa-pencil"></i>edit</a>'+
 					'<a style="color: #333333; " href="#" onclick="deleteBoxElement('+bdat.ID+'); return false;"><i class="fa fa-trash" style="font-size: 25px; margin-right:20px; float:right;"></i></a></div>'+
 				'');
 				
@@ -932,8 +949,8 @@ $("#page").fadeIn(1500);
 	
 	
 	window.editBoxElement = function (boxelementID) {
-	window.helperadd();
-	$('#lightbox>#content').html('<div class="boxtitle">Edit Box Item</div>');
+
+	$('#lightbox>#content').html('<div class="boxtitle" style="color: #fff; clear: both; margin-top: -15px; margin-left: 25px; " ></div>');
 			var url="navigation/boxelements.php?be="+ boxelementID+'';
 		$.getJSON(url,function(json){
 			$.each(json.boxiteminfo,function(i,idat){
@@ -995,7 +1012,7 @@ $("#page").fadeIn(1500);
 			var url="navigation/elements.php?e="+ itemID;
 		$.getJSON(url,function(json){
 			$.each(json.elementinfo,function(i,idat){
-				$('#lightbox>#content').html('<div class="boxtitle">Edit Element</div>');
+				$('#lightbox>#content').html('<div class="boxtitle">Edit Element <span style="float: right">'+itemID+'</span></div>');
 				var str = idat.pagecontent;
 				var safetext= str.replace(/<br>/g, "\r");
 			
